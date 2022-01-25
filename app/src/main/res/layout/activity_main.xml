@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#ced6d0"
+    android:backgroundTint="@android:color/darker_gray">
+
+   <TextView
+       android:id="@+id/txtCal"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+       android:text="Calculator"
+
+       android:textStyle="bold"
+       android:textSize="40sp"
+       android:layout_marginTop="15dp"
+
+
+       android:textAppearance="@style/CardView.Dark"
+       />
+
+   <TextView
+       android:id="@+id/txtEdit3"
+       android:layout_width="350dp"
+       android:layout_height="39dp"
+       android:layout_below="@+id/txtEdit2"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="15dp"
+       android:background="@color/white"
+       android:hint="Result"
+       android:textSize="30dp"
+       android:textStyle="bold"
+       android:textColorHint="#000000"
+
+       />
+
+
+
+   <EditText
+       android:id="@+id/txtEdit1"
+       android:layout_width="350dp"
+       android:layout_height="39dp"
+       android:layout_below="@+id/txtCal"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="15dp"
+       android:background="@color/white"
+       android:hint="Num1"
+       android:inputType="number"
+       android:textColorHint="#000000"
+
+       />
+
+   <EditText
+       android:id="@+id/txtEdit2"
+       android:layout_width="350dp"
+       android:layout_height="39dp"
+       android:layout_below="@+id/txtEdit1"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="15dp"
+       android:background="@color/white"
+       android:hint="Num2"
+       android:inputType="number"
+       android:textColorHint="#000000" />
+
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/Linear1"
+        android:layout_below="@+id/txtEdit3"
+         android:layout_marginTop="25dp">
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:id="@+id/Cancel"
+            android:layout_marginLeft="30dp"
+           android:text="C"
+            android:onClick="btnclr"
+           android:theme="@style/Base.CardView"/>
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+           android:text="/"
+            android:onClick="btndiv"
+            android:layout_marginLeft="20dp"
+           android:id="@+id/Div"
+
+           />
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+           android:text="*"
+           android:id="@+id/mul"
+           android:layout_marginLeft="20dp"
+            android:onClick="btnmul" />
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:id="@+id/eqauls"
+           android:text="="
+           android:layout_marginLeft="20dp"/>
+
+
+
+
+
+     </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/Linear2"
+       android:layout_below="@+id/Linear1"
+       >
+
+      <Button
+          android:layout_width="70dp"
+          android:layout_height="50dp"
+          android:id="@+id/seven"
+          android:layout_marginLeft="30dp"
+          android:text="7"
+          android:theme="@style/Base.CardView"/>
+      <Button
+          android:layout_width="70dp"
+          android:layout_height="wrap_content"
+          android:text="8"
+          android:layout_marginLeft="20dp"
+          android:onClick="btneight"
+          android:id="@+id/Eight"
+
+          />
+      <Button
+          android:layout_width="70dp"
+          android:layout_height="50dp"
+          android:text="9"
+          android:id="@+id/Nine"
+          android:layout_marginLeft="20dp"
+          />
+      <Button
+          android:layout_width="70dp"
+          android:layout_height="50dp"
+          android:id="@+id/minus"
+          android:text="-"
+          android:onClick="btnsub"
+          android:layout_marginLeft="20dp"/>
+
+
+
+
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/Linear4"
+       android:layout_below="@+id/Linear3"
+       >
+
+      <Button
+          android:layout_width="70dp"
+          android:layout_height="50dp"
+          android:id="@+id/One"
+          android:layout_marginLeft="30dp"
+          android:text="1"
+          android:theme="@style/Base.CardView"/>
+      <Button
+          android:layout_width="70dp"
+          android:layout_height="50dp"
+          android:text="2"
+          android:layout_marginLeft="20dp"
+          android:id="@+id/Two"
+
+          />
+      <Button
+          android:layout_width="70dp"
+          android:layout_height="50dp"
+          android:text="3"
+          android:id="@+id/Three"
+          android:layout_marginLeft="20dp"
+          />
+      <Button
+          android:layout_width="70dp"
+          android:layout_height="50dp"
+          android:id="@+id/Modulo"
+          android:text="%"
+          android:onClick="btnmod"
+          android:layout_marginLeft="20dp"/>
+
+
+
+
+
+   </LinearLayout>
+
+   <LinearLayout
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:id="@+id/Linear3"
+   android:layout_below="@+id/Linear2"
+   >
+
+   <Button
+       android:layout_width="70dp"
+       android:layout_height="50dp"
+       android:id="@+id/Four"
+       android:layout_marginLeft="30dp"
+       android:text="4"
+       android:theme="@style/Base.CardView"/>
+   <Button
+       android:layout_width="70dp"
+       android:layout_height="50dp"
+       android:text="5"
+       android:layout_marginLeft="20dp"
+       android:id="@+id/Five"
+
+       />
+   <Button
+       android:layout_width="70dp"
+       android:layout_height="50dp"
+       android:text="6"
+       android:id="@+id/Six"
+       android:layout_marginLeft="20dp"
+       />
+
+      <Button
+          android:id="@+id/CancelOne"
+          android:layout_width="70dp"
+          android:layout_height="50dp"
+          android:layout_marginLeft="20dp"
+          android:text="+"
+          android:onClick="btnsum"/>
+
+
+   </LinearLayout>
+
+
+   <LinearLayout
+       android:id="@+id/line"
+       android:layout_width="match_parent"
+       android:layout_height="10dp"
+       android:layout_below="@+id/Linear4"
+
+       android:layout_marginTop="7dp"
+
+       android:orientation="horizontal">
+
+      <View
+          android:layout_width="320dp"
+          android:layout_height="6dp"
+          android:layout_marginLeft="45dp"
+          android:layout_marginRight="30dp"
+          android:background="#E91E63" />
+
+
+   </LinearLayout>
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+      android:text="Created By Omama Bashir"
+       android:layout_centerHorizontal="true"
+      android:layout_below="@+id/line"
+       android:layout_marginTop="10dp"
+       android:textStyle="bold"
+       android:textColor="@color/black"
+       android:textSize="20dp"/>
+</RelativeLayout>
